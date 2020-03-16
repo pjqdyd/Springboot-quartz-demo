@@ -2,7 +2,7 @@ package com.pjqdyd.hello;
 
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
-
+import java.util.GregorianCalendar;
 import java.util.concurrent.TimeUnit;
 
 /**   
@@ -24,7 +24,10 @@ public class HelloQuartz {
                         SimpleScheduleBuilder.simpleSchedule()
                         .withIntervalInSeconds(3) //隔3秒钟, 立即开始1次,循环2次
                         .withRepeatCount(2)
-                ) .build();
+                        //.repeatForever()  //一直循环
+                )
+                .endAt(new GregorianCalendar(2020,3,15, 16, 3, 0).getTime()) //结束日期
+                .build();
         //创建一个任务详情类(封装job)
         JobDetail jobDetail = JobBuilder.newJob(HelloJob.class)
                 .withIdentity("job1", "job-group1")
