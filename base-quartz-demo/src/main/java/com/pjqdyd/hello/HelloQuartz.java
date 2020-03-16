@@ -22,7 +22,7 @@ public class HelloQuartz {
                 .startNow()     //触发器立即开始
                 .withSchedule(
                         SimpleScheduleBuilder.simpleSchedule()
-                        .withIntervalInSeconds(3) //隔3秒钟, 循环2次
+                        .withIntervalInSeconds(3) //隔3秒钟, 立即开始1次,循环2次
                         .withRepeatCount(2)
                 ) .build();
         //创建一个任务详情类(封装job)
