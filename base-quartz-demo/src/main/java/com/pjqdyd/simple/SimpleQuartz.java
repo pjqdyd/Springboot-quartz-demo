@@ -1,17 +1,18 @@
-package com.pjqdyd.hello;
+package com.pjqdyd.simple;
 
+import com.pjqdyd.HelloJob;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 import java.util.GregorianCalendar;
 import java.util.concurrent.TimeUnit;
 
 /**   
- * @Description:  [Quartz基本使用]
+ * @Description:  [Quartz基本使用, 简单触发器]
  * @Author:       pjqdyd
  * @Version:      [v1.0.0]
  */
 
-public class HelloQuartz {
+public class SimpleQuartz {
 
     public static void main(String[] args) throws SchedulerException, InterruptedException {
         //创建scheduler调度器

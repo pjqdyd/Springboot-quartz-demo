@@ -1,4 +1,4 @@
-package com.pjqdyd.hello;
+package com.pjqdyd;
 
 import org.quartz.Job;
 import org.quartz.JobDetail;
