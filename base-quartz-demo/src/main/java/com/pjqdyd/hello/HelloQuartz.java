@@ -19,7 +19,7 @@ public class HelloQuartz {
         //定义一个Trigger触发条件类
         Trigger trigger = TriggerBuilder.newTrigger()
                 .withIdentity("trigger1" , "group1")
-                .startNow()     //触发器立即开始
+                .startNow()     //触发器立即开始 .startAt()定义开始日期
                 .withSchedule(
                         SimpleScheduleBuilder.simpleSchedule()
                         .withIntervalInSeconds(3) //隔3秒钟, 立即开始1次,循环2次
