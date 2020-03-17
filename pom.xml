@@ -16,6 +16,12 @@
         <module>springboot-store-quartz-demo</module>
     </modules>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.4.RELEASE</version>
+    </parent>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -27,12 +33,6 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-quartz</artifactId>
-                <version>2.1.4.RELEASE</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter</artifactId>
                 <version>2.1.4.RELEASE</version>
             </dependency>
 
