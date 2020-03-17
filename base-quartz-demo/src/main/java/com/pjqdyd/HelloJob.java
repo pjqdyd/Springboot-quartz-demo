@@ -1,9 +1,6 @@
 package com.pjqdyd;
 
-import org.quartz.Job;
-import org.quartz.JobDetail;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
+import org.quartz.*;
 
 import java.util.Date;
 
@@ -13,6 +10,7 @@ import java.util.Date;
  * @Version:      [v1.0.0]
  */
 
+//@DisallowConcurrentExecution //不允许并发执行
 public class HelloJob implements Job {
 
     @Override
